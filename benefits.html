@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기대효과 | 안성시 청년 창업 플랫폼</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="font-[Noto+Sans+KR] bg-gray-50 text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="text-2xl font-bold text-blue-700">
+                    안성시 청년 창업 플랫폼
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#overview" class="font-medium hover:text-blue-600 transition">소개</a>
+                <a href="current-status.html" class="font-medium hover:text-blue-600 transition">현황 및 문제점</a>
+                <a href="regions.html" class="font-medium hover:text-blue-600 transition font-bold text-blue-600">지역별 허브</a>
+                <a href="support.html" class="font-medium hover:text-blue-600 transition">지원 시스템</a>
+                <a href="roadmap.html" class="font-medium hover:text-blue-600 transition">추진 로드맵</a>
+                <a href="benefits.html" class="font-medium hover:text-blue-600 transition">기대효과</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="menuButton" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="../index.html#overview" class="font-medium hover:text-blue-600 transition py-2">소개</a>
+                <a href="current-status.html" class="font-medium hover:text-blue-600 transition py-2">현황 및 문제점</a>
+                <a href="regions.html" class="font-medium hover:text-blue-600 transition py-2 font-bold text-blue-600">지역별 허브</a>
+                <a href="support.html" class="font-medium hover:text-blue-600 transition py-2">지원 시스템</a>
+                <a href="roadmap.html" class="font-medium hover:text-blue-600 transition py-2">추진 로드맵</a>
+                <a href="benefits.html" class="font-medium hover:text-blue-600 transition py-2">기대효과</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="py-12 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-4 text-center">기대효과</h1>
+            <p class="text-xl max-w-3xl mx-auto text-center">청년 창업 플랫폼을 통해 안성시 전체가 균형 있게 발전하고<br>청년들이 뿌리내릴 수 있는 지속가능한 선순환 구조 창출</p>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">총체적 기대효과</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">안성시 청년 창업 플랫폼은 경제적, 사회적, 행정적 측면에서 다양한 기대효과를 창출합니다. 지역 균형 발전과 청년 일자리 창출이라는 핵심 목표를 달성하여 '살기 좋은 일자리 도시'로 거듭나게 될 것입니다.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-blue-50 rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-105">
+                    <div class="bg-blue-600 py-4 px-6 text-white text-center">
+                        <h3 class="text-xl font-bold">경제적 효과</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="text-blue-600 flex-shrink-0 mr-3">
+                                    <i class="fas fa-check-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">청년 일자리 창출</div>
+                                    <div class="text-gray-700 mt-1">5년간 직접 일자리 1,500개, 간접 일자리 3,000개 창출</div>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-blue-600 flex-shrink-0 mr-3">
+                                    <i class="fas fa-check-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">지역경제 활성화</div>
+                                    <div class="text-gray-700 mt-1">창업 기업 연간 매출액 300억원 달성, 지역 내 소비 증가</div>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-blue-600 flex-shrink-0 mr-3">
+                                    <i class="fas fa-check-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">인구 유출 방지</div>
+                                    <div class="text-gray-700 mt-1">청년 정착률 25%p 향상, 동부권 인구 감소율 50% 감소</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-105">
+                    <div class="bg-green-600 py-4 px-6 text-white text-center">
+                        <h3 class="text-xl font-bold">사회적 효과</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="text-green-600 flex-shrink-0 mr-3">
+                                    <i class="fas fa-check-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">지역 균형 발전</div>
+                                    <div class="text-gray-700 mt-1">동서간 경제 격차 30% 감소, 동부권 활력 제고</div>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-green-600 flex-shrink-0 mr-3">
+                                    <i class="fas fa-check-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">지역 특화산업 육성</div>
+                                    <div class="text-gray-700 mt-1">권역별 특화산업 육성으로 지속가능한 발전 기반 마련</div>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-green-600 flex-shrink-0 mr-3">
+                                    <i class="fas fa-check-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">혁신 생태계 조성</div>
+                                    <div class="text-gray-700 mt-1">안성시 전역에 걸친 창의적 혁신 문화 확산</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-purple-50 rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-105">
+                    <div class="bg-purple-600 py-4 px-6 text-white text-center">
+                        <h3 class="text-xl font-bold">행정적 효과</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="text-purple-600 flex-shrink-0 mr-3">
+                                    <i class="fas fa-check-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">정책 체감도 향상</div>
+                                    <div class="text-gray-700 mt-1">시민 일자리 정책 체감도 80점 이상 달성</div>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-purple-600 flex-shrink-0 mr-3">
+                                    <i class="fas fa-check-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">공공-민간-대학 협력 모델</div>
+                                    <div class="text-gray-700 mt-1">삼각 협력 거버넌스 구축으로 정책 효과성 제고</div>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-purple-600 flex-shrink-0 mr-3">
+                                    <i class="fas fa-check-circle text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">안성형 일자리 브랜드화</div>
+                                    <div class="text-gray-700 mt-1">'안성시 청년 창업 도시' 브랜드 구축으로 외부 인재 유입 촉진</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economic Impact Section -->
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">경제적 효과</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">청년 창업 플랫폼을 통해 일자리 창출, 지역경제 활성화, 인구 유출 방지 등 다양한 경제적 효과를 기대할 수 있습니다.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <!-- Left Column - Charts and Visuals -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-blue-700 mb-4">일자리 창출 효과</h3>
+                        <canvas id="jobsChart" width="400" height="300"></canvas>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-blue-700 mb-4">지역경제 매출 효과</h3>
+                        <canvas id="revenueChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Key Points -->
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-briefcase text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">청년 일자리 창출</h4>
+                                <p class="text-gray-700 mb-3">창업 플랫폼을 통해 5년간 직접 일자리 1,500개, 간접 일자리 3,000개를 창출합니다. 창업 기업당 평균 3명의 고용을 창출하며, 연관 산업의 파급효과로 추가 일자리가 생겨납니다.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">직접 고용 1,500명</span>
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">간접 고용 3,000명</span>
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">500개 기업 육성</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-chart-line text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">지역경제 활성화</h4>
+                                <p class="text-gray-700 mb-3">창업 기업의 연간 매출액이 300억원에 달하며, 지역 내 소비가 증가합니다. 창업 기업당 평균 연매출 6천만원을 달성하고, 권역별 유동인구 증가로 지역 상권이 활성화됩니다.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">연간 매출 300억원</span>
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">기업당 매출 6천만원</span>
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">지역 소비 증가</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-users text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">인구 유출 방지</h4>
+                                <p class="text-gray-700 mb-3">청년 정착률이 25%p 향상되고, 동부권 인구 감소율이 50% 감소합니다. 창업자 및 취업자 2,000명의 안성시 정착과 가족 단위 정착으로 인구 유입 효과가 증대됩니다.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">청년 정착률 25%p↑</span>
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">인구감소율 50%↓</span>
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">2,000명 정착</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Impact Section -->
+    <section class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">사회적 효과</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">청년 창업 플랫폼은 지역 균형 발전, 특화산업 육성, 혁신 생태계 조성 등 사회적 가치를 창출합니다.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-105">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-green-600 flex items-center justify-center">
+                            <i class="fas fa-balance-scale text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-green-700 mb-3">지역 균형 발전</h3>
+                        <p class="text-gray-700 mb-4">동서간 경제 격차를 30% 감소시키고, 동부권의 활력을 제고합니다. 동부권 창업자 200명 육성을 통해 지역 활력을 회복하고, 권역별 특화산업 육성으로 각 지역의 경쟁력을 강화합니다.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">경제 격차 30% 감소</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">동부권 창업자 200명</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-105">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-green-600 flex items-center justify-center">
+                            <i class="fas fa-industry text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-green-700 mb-3">지역 특화산업 육성</h3>
+                        <p class="text-gray-700 mb-4">권역별 특화산업 생태계를 강화하여 지속가능한 발전 기반을 마련합니다. 서부권에는 반도체 소부장 연관 기업 100개, 중부권에는 문화콘텐츠 및 소셜벤처 150개, 동부권에는 농식품, 그린바이오, 체험관광 기업 250개를 육성합니다.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">서부: 반도체 100개</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">중부: 콘텐츠 150개</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">동부: 농식품 250개</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-105">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-green-600 flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-green-700 mb-3">혁신 생태계 조성</h3>
+                        <p class="text-gray-700 mb-4">안성시 전역에 걸친 창의적 혁신 문화를 확산합니다. 권역별 창업 커뮤니티 형성 및 협업 문화가 정착되고, 지역 문제 해결형 소셜벤처 육성으로 사회적 가치가 창출됩니다.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">창업 커뮤니티</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">협업 문화</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">사회적 가치</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Regional Balance Visualization -->
+            <div class="max-w-5xl mx-auto mt-12 bg-white rounded-xl shadow-md p-8">
+                <h3 class="text-xl font-bold text-green-700 mb-6 text-center">권역별 균형 발전 효과</h3>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-green-50 rounded-lg p-6 text-center">
+                        <h4 class="font-bold text-green-700 mb-3">서부권</h4>
+                        <div class="relative w-36 h-36 mx-auto mb-4">
+                            <div class="absolute inset-0 rounded-full border-4 border-green-200"></div>
+                            <div class="absolute inset-0 rounded-full border-4 border-green-500 border-t-transparent" style="transform: rotate(45deg);"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-green-700">100</div>
+                                    <div class="text-sm text-green-600">기업 육성</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">반도체, 소부장, 첨단기술 중심의 테크 이노베이션 허브 조성</p>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-lg p-6 text-center">
+                        <h4 class="font-bold text-green-700 mb-3">중부권</h4>
+                        <div class="relative w-36 h-36 mx-auto mb-4">
+                            <div class="absolute inset-0 rounded-full border-4 border-green-200"></div>
+                            <div class="absolute inset-0 rounded-full border-4 border-green-500 border-t-transparent" style="transform: rotate(95deg);"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-green-700">150</div>
+                                    <div class="text-sm text-green-600">기업 육성</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">문화콘텐츠, 소셜벤처, 커뮤니티 비즈니스 중심의 도심 문화창업 센터 운영</p>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-lg p-6 text-center">
+                        <h4 class="font-bold text-green-700 mb-3">동부권</h4>
+                        <div class="relative w-36 h-36 mx-auto mb-4">
+                            <div class="absolute inset-0 rounded-full border-4 border-green-200"></div>
+                            <div class="absolute inset-0 rounded-full border-4 border-green-500 border-t-transparent" style="transform: rotate(170deg);"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-green-700">250</div>
+                                    <div class="text-sm text-green-600">기업 육성</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">농식품, 바이오, 그린에너지, 농촌체험관광 중심의 그린바이오 창업마을 구축</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Administrative Impact Section -->
+    <section class="py-16 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">행정적 효과</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">청년 창업 플랫폼은 정책 체감도 향상, 협력 거버넌스 구축, 도시 브랜드 강화 등 행정적 효과를 창출합니다.</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Left Column -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 text-purple-700 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-poll text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-2">정책 체감도 향상</h4>
+                                    <p class="text-gray-700 mb-3">시민 일자리 정책 체감도가 80점 이상 달성됩니다. 가시적인 청년 창업 성공 사례가 창출되고, 지역 주민과 함께하는 창업 프로그램으로 정책 참여도가 제고됩니다.</p>
+                                    
+                                    <div class="mt-4">
+                                        <h5 class="font-bold text-sm text-purple-700 mb-2">정책 체감도 향상 목표</h5>
+                                        <div class="w-full bg-gray-200 rounded-full h-3 mb-1">
+                                            <div class="bg-purple-600 h-3 rounded-full" style="width: 80%"></div>
+                                        </div>
+                                        <div class="flex justify-between text-sm text-gray-600">
+                                            <span>현재 (50점)</span>
+                                            <span>목표 (80점)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 text-purple-700 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-handshake text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-2">공공-민간-대학 협력 모델</h4>
+                                    <p class="text-gray-700 mb-4">삼각 협력 거버넌스 구축으로 정책 효과성이 제고됩니다. 한경국립대 등 교육기관과의 협력으로 인재양성-창업-취업 선순환 구조가 확립되고, 기업과 창업자 간 협력 네트워크가 구축됩니다.</p>
+                                    
+                                    <div class="flex flex-wrap gap-y-3">
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <div class="w-3 h-3 rounded-full bg-purple-600 mr-2"></div>
+                                                <span class="text-sm">인재 양성 프로그램</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <div class="w-3 h-3 rounded-full bg-purple-600 mr-2"></div>
+                                                <span class="text-sm">R&D 공동 추진</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <div class="w-3 h-3 rounded-full bg-purple-600 mr-2"></div>
+                                                <span class="text-sm">산학 프로젝트</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <div class="w-3 h-3 rounded-full bg-purple-600 mr-2"></div>
+                                                <span class="text-sm">멘토링 네트워크</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 text-purple-700 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-city text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-2">안성형 일자리 브랜드화</h4>
+                                    <p class="text-gray-700 mb-3">'안성시 청년 창업 도시' 브랜드 구축으로 외부 인재 유입이 촉진됩니다. 창업 친화도시로서의 안성시 이미지가 확립되고, 경기 남부권 창업 거점으로 발전하여 광역 경쟁력이 확보됩니다. 또한 전국 창업 축제 및 행사 유치로 도시 브랜드 가치가 상승합니다.</p>
+                                    
+                                    <div class="bg-purple-50 rounded-lg p-4 mt-4">
+                                        <div class="text-center font-bold text-purple-700 mb-2">브랜드 가치 상승 효과</div>
+                                        <div class="grid grid-cols-3 gap-2 text-center">
+                                            <div>
+                                                <div class="text-xl font-bold text-purple-700">150%</div>
+                                                <div class="text-xs text-gray-600">도시 인지도</div>
+                                            </div>
+                                            <div>
+                                                <div class="text-xl font-bold text-purple-700">200%</div>
+                                                <div class="text-xs text-gray-600">청년 유입률</div>
+                                            </div>
+                                            <div>
+                                                <div class="text-xl font-bold text-purple-700">180%</div>
+                                                <div class="text-xs text-gray-600">관광객 증가</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                            <div class="bg-purple-600 py-3 px-6 text-white">
+                                <h4 class="font-bold">행정 발전 모델</h4>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex flex-col space-y-3">
+                                    <div class="flex items-center">
+                                        <div class="w-1/3 text-right pr-4 font-medium">균형발전 정책</div>
+                                        <div class="w-2/3 h-2 bg-gray-200 rounded-full">
+                                            <div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-1/3 text-right pr-4 font-medium">창업 지원체계</div>
+                                        <div class="w-2/3 h-2 bg-gray-200 rounded-full">
+                                            <div class="bg-purple-600 h-2 rounded-full" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-1/3 text-right pr-4 font-medium">일자리 정책 혁신</div>
+                                        <div class="w-2/3 h-2 bg-gray-200 rounded-full">
+                                            <div class="bg-purple-600 h-2 rounded-full" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-1/3 text-right pr-4 font-medium">민관협력 모델</div>
+                                        <div class="w-2/3 h-2 bg-gray-200 rounded-full">
+                                            <div class="bg-purple-600 h-2 rounded-full" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4 text-sm text-gray-600 italic text-center">
+                                    전국 지자체 대비 안성시 행정 발전 수준 예상치 (2030년)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Conclusion Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">결론</h2>
+                <p class="text-xl mb-6">안성시의 지속가능한 발전을 위해서는 단순한 일자리 양적 확대를 넘어, 지역 균형과 청년 정착이라는 두 가지 과제를 동시에 해결할 수 있는 혁신적 접근이 필요합니다.</p>
+                <p class="text-xl mb-8">'안성시 청년 창업 플랫폼'은 지역별 특성을 살린 창업 생태계를 조성하고, 청년들이 안성시에 뿌리내릴 수 있는 환경을 만들어, 안성시 전체가 균형 있게 발전하는 선순환 구조를 만들 것입니다.</p>
+                
+                <div class="bg-white text-blue-700 rounded-xl p-6 shadow-lg">
+                    <p class="text-lg font-bold">특히 반도체 소부장 특화단지와 같은 대규모 산업 프로젝트의 혜택이 서부에 편중되지 않고, 동부 농촌지역까지 고르게 확산될 수 있도록 하는 '연결의 플랫폼' 역할을 수행할 것입니다. 이를 통해 안성시는 '살기 좋은 일자리 도시'로 거듭나, 청년들이 머물고 싶고, 일하고 싶은 도시로 자리매김할 수 있을 것입니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">함께 만들어가는 균형발전 안성</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8">청년 창업 플랫폼을 통해 안성시 전역이 고르게 발전하고, <br>청년들이 정착하는 활기찬 도시를 함께 만들어갑니다.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="../index.html#contact" class="bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-bold transition">문의하기</a>
+                <a href="../pages/roadmap.html" class="bg-gray-600 text-white hover:bg-gray-700 px-6 py-3 rounded-lg font-bold transition">추진 로드맵 살펴보기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">안성시 청년 창업 플랫폼</h3>
+                    <p class="text-gray-400 mb-4">지역 균형 발전과 청년 일자리 창출을 위한 통합 창업 지원 시스템</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">메뉴</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#overview" class="text-gray-400 hover:text-white transition">소개</a></li>
+                        <li><a href="../pages/current-status.html" class="text-gray-400 hover:text-white transition">현황 및 문제점</a></li>
+                        <li><a href="../index.html#regions" class="text-gray-400 hover:text-white transition">지역별 허브</a></li>
+                        <li><a href="../pages/support.html" class="text-gray-400 hover:text-white transition">지원 시스템</a></li>
+                        <li><a href="../pages/roadmap.html" class="text-gray-400 hover:text-white transition">추진 로드맵</a></li>
+                        <li><a href="../index.html#benefits" class="text-gray-400 hover:text-white transition">기대효과</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">연락처</h3>
+                    <p class="text-gray-400 mb-2">경기도 안성시 시청길 25</p>
+                    <p class="text-gray-400 mb-2">안성시청 전략기획담당관</p>
+                    <p class="text-gray-400 mb-2">이메일: wts755@korea.kr</p>
+                    <p class="text-gray-400">전화: 031-678-2025</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 안성시 청년 창업 플랫폼. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuButton').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        
+        // Charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Jobs Chart
+            const jobsCtx = document.getElementById('jobsChart').getContext('2d');
+            const jobsChart = new Chart(jobsCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['1년차', '2년차', '3년차', '4년차', '5년차'],
+                    datasets: [
+                        {
+                            label: '직접 일자리',
+                            data: [150, 250, 350, 450, 1500],
+                            backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                            borderColor: 'rgba(59, 130, 246, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: '간접 일자리',
+                            data: [300, 500, 700, 1500, 3000],
+                            backgroundColor: 'rgba(147, 197, 253, 0.7)',
+                            borderColor: 'rgba(147, 197, 253, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '일자리 수 (명)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '연도'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '연도별 일자리 창출 효과',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Revenue Chart
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            const revenueChart = new Chart(revenueCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1년차', '2년차', '3년차', '4년차', '5년차'],
+                    datasets: [
+                        {
+                            label: '창업기업 매출액',
+                            data: [30, 80, 150, 240, 300],
+                            backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                            borderColor: 'rgba(59, 130, 246, 1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '매출액 (억원)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '연도'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '연도별 창업기업 매출액 성장',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+}
