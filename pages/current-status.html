@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현황 및 문제점 | 안성시 청년 창업 플랫폼</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="font-[Noto+Sans+KR] bg-gray-50 text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="text-2xl font-bold text-blue-700">
+                    안성시 청년 창업 플랫폼
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#overview" class="font-medium hover:text-blue-600 transition">소개</a>
+                <a href="current-status.html" class="font-medium hover:text-blue-600 transition">현황 및 문제점</a>
+                <a href="regions.html" class="font-medium hover:text-blue-600 transition">지역별 허브</a>
+                <a href="support.html" class="font-medium hover:text-blue-600 transition">지원 시스템</a>
+                <a href="roadmap.html" class="font-medium hover:text-blue-600 transition">추진 로드맵</a>
+                <a href="benefits.html" class="font-medium hover:text-blue-600 transition">기대효과</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="menuButton" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="../index.html#overview" class="font-medium hover:text-blue-600 transition py-2">소개</a>
+                <a href="current-status.html" class="font-medium hover:text-blue-600 transition py-2">현황 및 문제점</a>
+                <a href="regions.html" class="font-medium hover:text-blue-600 transition py-2">지역별 허브</a>
+                <a href="support.html" class="font-medium hover:text-blue-600 transition py-2">지원 시스템</a>
+                <a href="roadmap.html" class="font-medium hover:text-blue-600 transition py-2">추진 로드맵</a>
+                <a href="benefits.html" class="font-medium hover:text-blue-600 transition py-2">기대효과</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="py-12 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-4 text-center">안성시 현황 및 문제점</h1>
+            <p class="text-xl max-w-3xl mx-auto text-center">청년 창업 플랫폼 제안을 위한 지역 현황 분석 및 문제점 진단</p>
+        </div>
+    </section>
+
+    <!-- Navigation for this page -->
+    <section class="py-4 bg-white border-b shadow-sm sticky top-16 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex overflow-x-auto whitespace-nowrap py-2 hide-scrollbar">
+                <a href="#industry-employment" class="px-5 py-2 rounded-full hover:bg-blue-100 hover:text-blue-700 transition mr-2 text-sm md:text-base">산업 및 고용 현황</a>
+                <a href="#regional-gap" class="px-5 py-2 rounded-full hover:bg-blue-100 hover:text-blue-700 transition mr-2 text-sm md:text-base">지역별 격차</a>
+                <a href="#youth-employment" class="px-5 py-2 rounded-full hover:bg-blue-100 hover:text-blue-700 transition text-sm md:text-base">청년 일자리</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry and Employment Status -->
+    <section id="industry-employment" class="py-16 bg-white animate-on-scroll" data-animation="fadeIn">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <!-- Left content -->
+                <div class="md:w-1/2">
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <i class="fas fa-industry text-white text-xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold">산업 및 고용 현황</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="animate-on-scroll" data-animation="slideInLeft">
+                            <h3 class="text-xl font-bold text-blue-700 mb-3">산업구조</h3>
+                            <p class="text-gray-700 mb-4">안성시는 제조업 비중이 41.8%로 경기도 내 6위를 차지하는 제조업 중심 도시입니다. 기계·장비, 식품, 반도체 소부장 등 3대 전략산업이 지역경제의 근간을 이루고 있으나, 대기업보다는 중소기업 중심 구조로 양질의 전문직 일자리가 제한적입니다.</p>
+                            
+                            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                                <h4 class="font-bold mb-2">주요 산업 현황</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <span class="text-blue-600 font-bold mr-2">•</span>
+                                        <span>제조업 비중 41.8% (경기도 내 6위)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-blue-600 font-bold mr-2">•</span>
+                                        <span>3대 전략산업: 기계·장비, 식품, 반도체 소부장</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-blue-600 font-bold mr-2">•</span>
+                                        <span>중소기업 중심 구조 (대기업 비중 낮음)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="animate-on-scroll" data-animation="slideInLeft">
+                            <h3 class="text-xl font-bold text-blue-700 mb-3">고용지표</h3>
+                            <p class="text-gray-700 mb-4">2025년 기준 고용률은 64.2%로 경기도 평균(62.5%)을 상회하며 도내 3위를 기록했으나, 실업률은 3.9%로 2013년 이후 최고치에 달했습니다. 특히 청년(15~29세) 실업률은 7.5%(전국 평균)로 전년 대비 1.0%p 상승하여 청년 고용상황이 악화되고 있습니다.</p>
+                            
+                            <div class="bg-blue-50 rounded-lg overflow-hidden">
+                                <div class="bg-blue-600 text-white py-2 px-4">
+                                    <h4 class="font-bold">최근 고용지표 현황</h4>
+                                </div>
+                                <div class="p-4">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="bg-white p-3 rounded shadow-sm">
+                                            <p class="text-sm text-gray-500">안성시 고용률</p>
+                                            <p class="text-2xl font-bold text-blue-600">64.2%</p>
+                                            <p class="text-xs text-gray-500">경기도 평균 62.5% (도내 3위)</p>
+                                        </div>
+                                        <div class="bg-white p-3 rounded shadow-sm">
+                                            <p class="text-sm text-gray-500">안성시 실업률</p>
+                                            <p class="text-2xl font-bold text-red-600">3.9%</p>
+                                            <p class="text-xs text-gray-500">2013년 이후 최고치</p>
+                                        </div>
+                                        <div class="bg-white p-3 rounded shadow-sm">
+                                            <p class="text-sm text-gray-500">청년 실업률 (15~29세)</p>
+                                            <p class="text-2xl font-bold text-red-600">7.5%</p>
+                                            <p class="text-xs text-gray-500">전년 대비 1.0%p ↑</p>
+                                        </div>
+                                        <div class="bg-white p-3 rounded shadow-sm">
+                                            <p class="text-sm text-gray-500">청년 취업자 수 (전국)</p>
+                                            <p class="text-2xl font-bold text-red-600">356.9만명</p>
+                                            <p class="text-xs text-gray-500">전년 동월 대비 20.6만명 ↓</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right content -->
+                <div class="md:w-1/2">
+                    <div class="space-y-8">
+                        <div class="animate-on-scroll" data-animation="slideInRight">
+                            <h3 class="text-xl font-bold text-blue-700 mb-3">인구구조</h3>
+                            <p class="text-gray-700 mb-4">청년층(만 15~34세)은 전체 인구의 18.4%인 약 34,000명으로, 이 중 52%가 "수도권으로 이주를 선호한다"고 응답했습니다. 전국적으로 2025년 3월 기준 청년 취업자 수는 356.9만명으로 전년 동월 대비 20.6만명 감소했으며, 이는 청년 인구 감소폭 확대와 함께 고용 환경 악화를 보여줍니다.</p>
+                            
+                            <div class="rounded-lg overflow-hidden shadow-sm">
+                                <div class="relative h-64 bg-gradient-to-br from-blue-500 to-blue-700">
+                                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Population Pyramid Chart (Simplified) -->
+                                        <text x="250" y="30" fill="white" font-size="20" text-anchor="middle" font-weight="bold">안성시 인구 구조</text>
+                                        
+                                        <!-- Y-axis (Age Groups) -->
+                                        <text x="250" y="75" fill="white" font-size="14" text-anchor="middle">65세 이상</text>
+                                        <text x="250" y="125" fill="white" font-size="14" text-anchor="middle">35~64세</text>
+                                        <text x="250" y="175" fill="white" font-size="14" text-anchor="middle">15~34세</text>
+                                        <text x="250" y="225" fill="white" font-size="14" text-anchor="middle">0~14세</text>
+                                        
+                                        <!-- Left side (Female) -->
+                                        <rect x="120" y="60" width="130" height="25" fill="rgba(255,255,255,0.7)" />
+                                        <rect x="70" y="110" width="180" height="25" fill="rgba(255,255,255,0.7)" />
+                                        <rect x="150" y="160" width="100" height="25" fill="rgba(255,255,255,0.9)" />
+                                        <rect x="180" y="210" width="70" height="25" fill="rgba(255,255,255,0.7)" />
+                                        
+                                        <!-- Right side (Male) -->
+                                        <rect x="250" y="60" width="130" height="25" fill="rgba(255,255,255,0.7)" />
+                                        <rect x="250" y="110" width="180" height="25" fill="rgba(255,255,255,0.7)" />
+                                        <rect x="250" y="160" width="100" height="25" fill="rgba(255,255,255,0.9)" />
+                                        <rect x="250" y="210" width="70" height="25" fill="rgba(255,255,255,0.7)" />
+                                        
+                                        <!-- Highlight young population -->
+                                        <text x="250" y="200" fill="red" font-size="12" text-anchor="middle" font-weight="bold">청년층 18.4% (약 34,000명)</text>
+                                        <text x="250" y="270" fill="white" font-size="12" text-anchor="middle" font-style="italic">52%가 수도권 이주 선호</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="animate-on-scroll" data-animation="slideInRight">
+                            <h3 class="text-xl font-bold text-blue-700 mb-3">일자리 정책 현황</h3>
+                            <p class="text-gray-700 mb-4">안성시는 다양한 일자리 창출 정책을 추진하고 있으나, 실질적인 청년 고용 효과는 제한적입니다.</p>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-white rounded-lg p-4 border-l-4 border-blue-600 shadow-sm animate-on-scroll" data-animation="fadeIn">
+                                    <h4 class="font-bold">반도체 소부장 특화단지 조성</h4>
+                                    <p class="text-sm text-gray-600">보개면 동신리 일원, 157만㎡, 총사업비 5,946억 원</p>
+                                </div>
+                                
+                                <div class="bg-white rounded-lg p-4 border-l-4 border-green-600 shadow-sm animate-on-scroll" data-animation="fadeIn">
+                                    <h4 class="font-bold">청년 일자리 정책</h4>
+                                    <p class="text-sm text-gray-600">2025년 71억 2,900만원 투입</p>
+                                </div>
+                                
+                                <div class="bg-white rounded-lg p-4 border-l-4 border-purple-600 shadow-sm animate-on-scroll" data-animation="fadeIn">
+                                    <h4 class="font-bold">공공일자리 사업</h4>
+                                    <p class="text-sm text-gray-600">2023년 1분기 682명</p>
+                                </div>
+                                
+                                <div class="bg-white rounded-lg p-4 border-l-4 border-yellow-600 shadow-sm animate-on-scroll" data-animation="fadeIn">
+                                    <h4 class="font-bold">안성산업진흥원 설립</h4>
+                                    <p class="text-sm text-gray-600">2025년 말 개원 목표</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Regional Gap Section - Updated Regional Overview -->
+<section id="regional-gap" class="py-16 bg-gray-50 animate-on-scroll" data-animation="fadeIn">
+    <div class="container mx-auto px-4">
+        <div class="mb-8">
+            <div class="flex items-center mb-4">
+                <div class="bg-red-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                    <i class="fas fa-compress-alt text-white text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">지역별 격차와 소멸위험</h2>
+            </div>
+            <p class="text-xl text-gray-600 max-w-3xl">안성시 내 권역별 불균형이 심화되고 있으며, 특히 동부권의 인구 소멸 위험이 높아지고 있습니다.</p>
+        </div>
+        
+        <!-- Regional Comparison Cards - Replaces the Map SVG -->
+        <div class="mb-12">
+            <h3 class="text-xl font-bold mb-6 text-center">안성시 권역별 현황</h3>
+            
+            <!-- Region Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- West Region Card -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-blue-600 transition transform hover:scale-105 duration-300 h-full">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-3">
+                                <i class="fas fa-city text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-blue-700">서부권</h4>
+                                <p class="text-blue-600">공도읍 중심</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4 mt-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">인구 규모</span>
+                                <span class="font-bold">6만명 이상</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-blue-600 rounded-full" style="width: 80%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="text-gray-600">경제 활성도</span>
+                                <span class="font-bold">높음</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-blue-600 rounded-full" style="width: 85%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="text-gray-600">인프라 수준</span>
+                                <span class="font-bold">양호</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-blue-600 rounded-full" style="width: 75%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="text-gray-600">소멸위험지수</span>
+                                <span class="font-bold text-green-600">안전</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-green-500 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex items-start">
+                                <i class="fas fa-info-circle text-blue-600 mt-1 mr-2"></i>
+                                <p class="text-sm text-gray-600">반도체 소부장 특화단지 중심의 발전 예상, 양질의 일자리 가능성</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Central Region Card -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-purple-600 transition transform hover:scale-105 duration-300 h-full">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mr-3">
+                                <i class="fas fa-store-alt text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-purple-700">중부권</h4>
+                                <p class="text-purple-600">안성1~3동</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4 mt-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">인구 규모</span>
+                                <span class="font-bold">약 6만명</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-purple-600 rounded-full" style="width: 75%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="text-gray-600">경제 활성도</span>
+                                <span class="font-bold">중간</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-purple-600 rounded-full" style="width: 60%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="text-gray-600">인프라 수준</span>
+                                <span class="font-bold">보통</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-purple-600 rounded-full" style="width: 65%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="text-gray-600">소멸위험지수</span>
+                                <span class="font-bold text-yellow-600">주의</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-yellow-500 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex items-start">
+                                <i class="fas fa-info-circle text-purple-600 mt-1 mr-2"></i>
+                                <p class="text-sm text-gray-600">쇠퇴하는 원도심, 상권 활성화 및 도시재생 필요성 증가</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- East Region Card -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-red-600 transition transform hover:scale-105 duration-300 h-full">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center mr-3">
+                                <i class="fas fa-seedling text-red-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-red-700">동부권</h4>
+                                <p class="text-red-600">양성면 등 농촌지역</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4 mt-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">인구 규모</span>
+                                <span class="font-bold">소규모 (양성면 5,000명)</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-red-600 rounded-full" style="width: 30%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="text-gray-600">경제 활성도</span>
+                                <span class="font-bold">낮음</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-red-600 rounded-full" style="width: 25%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="text-gray-600">인프라 수준</span>
+                                <span class="font-bold">열악</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-red-600 rounded-full" style="width: 20%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="text-gray-600">소멸위험지수</span>
+                                <span class="font-bold text-red-600">위험</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-red-600 rounded-full" style="width: 15%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex items-start">
+                                <i class="fas fa-exclamation-triangle text-red-600 mt-1 mr-2"></i>
+                                <p class="text-sm text-gray-600">소멸위험지역 8개 읍면 지정, 인구 감소 및 고령화 심각</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Population Distribution Chart -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h4 class="text-lg font-bold mb-6 text-center">안성시 인구 분포 및 소멸위험 현황</h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Population Chart -->
+                    <div class="relative">
+                        <div class="flex justify-around items-end h-64">
+                            <div class="flex flex-col items-center">
+                                <div class="flex flex-col items-center w-20 mb-2">
+                                    <div class="bg-blue-600 w-16 rounded-t-lg" style="height: 160px;"></div>
+                                    <div class="bg-blue-300 w-16" style="height: 40px;"></div>
+                                </div>
+                                <div class="text-sm font-medium">서부권</div>
+                                <div class="text-xs text-gray-500">6만명+</div>
+                            </div>
+                            
+                            <div class="flex flex-col items-center">
+                                <div class="flex flex-col items-center w-20 mb-2">
+                                    <div class="bg-purple-600 w-16 rounded-t-lg" style="height: 150px;"></div>
+                                    <div class="bg-purple-300 w-16" style="height: 30px;"></div>
+                                </div>
+                                <div class="text-sm font-medium">중부권</div>
+                                <div class="text-xs text-gray-500">약 6만명</div>
+                            </div>
+                            
+                            <div class="flex flex-col items-center">
+                                <div class="flex flex-col items-center w-20 mb-2">
+                                    <div class="bg-red-600 w-16 rounded-t-lg" style="height: 30px;"></div>
+                                    <div class="bg-red-300 w-16" style="height: 60px;"></div>
+                                </div>
+                                <div class="text-sm font-medium">동부권</div>
+                                <div class="text-xs text-gray-500">소규모</div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center text-sm mt-4">
+                            <div class="flex justify-center items-center space-x-4">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-blue-600 mr-1"></div>
+                                    <span>청년층</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-purple-600 mr-1"></div>
+                                    <span>중장년층</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-red-300 mr-1"></div>
+                                    <span>고령층</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Extinction Risk Information -->
+                    <div>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <h5 class="font-bold mb-2">소멸위험지수란?</h5>
+                            <p class="text-sm text-gray-700">20~39세 여성인구 / 65세 이상 고령인구 비율이 0.5 미만인 지역이 소멸위험지역으로 분류됨</p>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-24 text-sm text-gray-600">서부권</div>
+                                <div class="flex-1 h-4 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="bg-green-500 h-full rounded-full" style="width: 85%"></div>
+                                </div>
+                                <div class="w-16 text-right text-sm font-bold ml-2 text-green-600">1.2</div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-24 text-sm text-gray-600">중부권</div>
+                                <div class="flex-1 h-4 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="bg-yellow-500 h-full rounded-full" style="width: 60%"></div>
+                                </div>
+                                <div class="w-16 text-right text-sm font-bold ml-2 text-yellow-600">0.7</div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-24 text-sm text-gray-600">동부권</div>
+                                <div class="flex-1 h-4 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="bg-red-500 h-full rounded-full" style="width: 25%"></div>
+                                </div>
+                                <div class="w-16 text-right text-sm font-bold ml-2 text-red-600">0.3</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-3 bg-red-50 rounded-lg border border-red-200">
+                            <div class="flex items-start">
+                                <i class="fas fa-exclamation-circle text-red-600 mr-2 mt-1"></i>
+                                <div>
+                                    <h5 class="font-bold text-red-800 mb-1">동부권 소멸위험 현황</h5>
+                                    <p class="text-sm text-gray-700">8개 읍면 모두 소멸위험지역으로 지정. 특히 양성면은 과거 번영했던 지역이나 현재는 인구 5,000명 수준으로 감소하여 지역 활력이 크게 저하됨.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Regional Gap Comparison Table -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-4 bg-gray-50 border-b">
+                    <h4 class="font-bold text-center">안성시 권역별 격차 비교</h4>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead>
+                            <tr>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">구분</th>
+                                <th class="px-6 py-3 bg-blue-50 text-left text-xs font-medium text-blue-700 uppercase tracking-wider">서부권</th>
+                                <th class="px-6 py-3 bg-purple-50 text-left text-xs font-medium text-purple-700 uppercase tracking-wider">중부권</th>
+                                <th class="px-6 py-3 bg-red-50 text-left text-xs font-medium text-red-700 uppercase tracking-wider">동부권</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">대표 지역</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">공도읍</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">안성1~3동</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">양성면 등 8개 읍면</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">인구 현황</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">6만명 이상</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">약 6만명</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">소규모 (읍면별 상이)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">산업 특성</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">제조업, 반도체 소부장</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">상업, 서비스업</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">농업 중심</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">교통 인프라</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">발달</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">양호</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">열악</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">소멸위험지수</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">1.2 (안전)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-yellow-600 font-medium">0.7 (주의)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-medium">0.3 (위험)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">청년층 비율</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">22%</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">19%</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">11%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <p class="mt-4 text-center text-sm text-gray-500">※ 동부권 8개 읍면 모두 소멸위험지역(소멸위험지수 0.5 미만)으로 지정되어 있어 지역 균형 발전 대책이 시급함</p>
+        </div>
+    </div>
+</section>
+    <!-- Youth Employment Issues Section -->
+    <section id="youth-employment" class="py-16 bg-white animate-on-scroll" data-animation="fadeIn">
+        <div class="container mx-auto px-4">
+            <div class="mb-8">
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <i class="fas fa-user-graduate text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">청년 일자리와 정책 체감도</h2>
+                </div>
+                <p class="text-xl text-gray-600 max-w-3xl">청년들이 느끼는 일자리 정책 만족도는 낮으며, 실질적인 고용 창출 효과가 미흡한 상황입니다.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Left column -->
+                <div class="space-y-6 animate-on-scroll" data-animation="slideInLeft">
+                    <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-600">
+                        <h3 class="text-xl font-bold text-blue-700 mb-3">청년 맞춤형 일자리 부족</h3>
+                        <p class="text-gray-700 mb-4">청년층(20~30대)의 75%가 "지역 내 전문직 기회 부재"를 호소하며, 67%는 "저임금 단순 노동 위주의 일자리 정책"이라고 비판하고 있습니다. 특히 대학 졸업자들이 지역 내에서 전문성을 발휘할 수 있는 일자리가 부족하여 청년 인재 유출로 이어지고 있습니다.</p>
+                        
+                        <div class="flex flex-col space-y-3 mt-4">
+                            <div class="flex items-center">
+                                <div class="w-32 text-sm text-gray-600">전문직 기회 부재</div>
+                                <div class="flex-1 h-5 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="bg-blue-600 h-full rounded-full" style="width: 75%"></div>
+                                </div>
+                                <div class="w-12 text-right text-sm font-bold ml-2">75%</div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-32 text-sm text-gray-600">저임금·단순노동 위주</div>
+                                <div class="flex-1 h-5 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="bg-blue-600 h-full rounded-full" style="width: 67%"></div>
+                                </div>
+                                <div class="w-12 text-right text-sm font-bold ml-2">67%</div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-32 text-sm text-gray-600">대졸자 역량 미활용</div>
+                                <div class="flex-1 h-5 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="bg-blue-600 h-full rounded-full" style="width: 81%"></div>
+                                </div>
+                                <div class="w-12 text-right text-sm font-bold ml-2">81%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-green-600">
+                        <h3 class="text-xl font-bold text-green-700 mb-3">창업 생태계 미흡</h3>
+                        <p class="text-gray-700 mb-4">청년 창업을 위한 인프라와 지원 시스템이 부족하며, 특히 동부권에서는 창업 기회가 더욱 제한적입니다. 청년들은 안성시에서 혁신적인 아이디어를 실현할 수 있는 환경이 미흡하다고 인식하고 있으며, 이는 창업을 통한 지역 정착률 저하로 이어지고 있습니다.</p>
+                        
+                        <div class="bg-green-50 rounded-lg p-4 mt-4">
+                            <h4 class="font-bold mb-2">창업 장벽 요인</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-times-circle text-red-500 mr-2"></i>
+                                    <span>창업 공간 및 시설 부족</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-times-circle text-red-500 mr-2"></i>
+                                    <span>창업 자금 지원 제한적</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-times-circle text-red-500 mr-2"></i>
+                                    <span>멘토링 및 네트워킹 기회 부족</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-times-circle text-red-500 mr-2"></i>
+                                    <span>지역별 특성을 살린 창업 지원 부재</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right column -->
+                <div class="space-y-6 animate-on-scroll" data-animation="slideInRight">
+                    <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-purple-600">
+                        <h3 class="text-xl font-bold text-purple-700 mb-3">정책 성과와 시민 체감도 간 괴리</h3>
+                        <p class="text-gray-700 mb-4">2024년 경기도 시군평가에서 안성시가 일자리 정책 등으로 우수시로 선정된 것(105개 평가지표 중 103개에서 S등급)과 달리, 시민들의 일자리 정책 체감도는 50점(100점 만점)에 그쳤습니다. "양질의 일자리 부족"(68%)이 최대 불만 요소로 나타나, 정책 효과가 시민 삶에 직접적으로 연결되지 못하고 있습니다.</p>
+                        
+                        <div class="flex justify-between items-center mt-6 p-4 bg-purple-50 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-purple-700">S등급</div>
+                                <div class="text-sm text-gray-600">경기도 시군평가<br>103/105 지표</div>
+                            </div>
+                            <div class="text-5xl font-bold text-gray-300">VS</div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-red-600">50점</div>
+                                <div class="text-sm text-gray-600">시민 정책 체감도<br>(100점 만점)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-yellow-600">
+                        <h3 class="text-xl font-bold text-yellow-700 mb-3">공공일자리의 한계</h3>
+                        <p class="text-gray-700 mb-4">공공일자리 사업은 60세 이상 어르신(65%), 경력단절 여성(20%) 등을 중심으로 운영되고 있으나, 30대 이하 청년층의 70%는 "단기성 일자리가 장기 고용으로 이어지지 않는다"며 부정적 의견을 표출하고 있습니다. 이는 공공일자리가 일시적 소득 지원은 될 수 있으나 지속가능한 고용 창출에는 한계가 있음을 보여줍니다.</p>
+                        
+                        <div class="mt-4">
+                            <h4 class="font-bold mb-3">공공일자리 참여 비율</h4>
+                            <div class="relative pt-1">
+                                <div class="flex mb-2 items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-yellow-600 bg-yellow-200">
+                                            60세 이상
+                                        </span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-xs font-semibold inline-block text-yellow-600">
+                                            65%
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-yellow-200">
+                                    <div style="width:65%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-600"></div>
+                                </div>
+                                
+                                <div class="flex mb-2 items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200">
+                                            경력단절 여성
+                                        </span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-xs font-semibold inline-block text-pink-600">
+                                            20%
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-pink-200">
+                                    <div style="width:20%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-600"></div>
+                                </div>
+                                
+                                <div class="flex mb-2 items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+                                            30대 이하 청년
+                                        </span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-xs font-semibold inline-block text-blue-600">
+                                            15%
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
+                                    <div style="width:15%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-600"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Summary Section -->
+            <div class="bg-blue-50 rounded-xl p-8 shadow-md animate-on-scroll" data-animation="fadeIn">
+                <h3 class="text-2xl font-bold mb-4 text-center">문제점 종합</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-bold text-blue-700 mb-3">구조적 문제</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-exclamation-circle text-red-600 mr-2 mt-1"></i>
+                                <span>서부-동부 간 심각한 지역 불균형 심화</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-exclamation-circle text-red-600 mr-2 mt-1"></i>
+                                <span>동부 8개 읍면 소멸위험지역 지정</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-exclamation-circle text-red-600 mr-2 mt-1"></i>
+                                <span>청년층의 지속적인 수도권 이주 선호 (52%)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-exclamation-circle text-red-600 mr-2 mt-1"></i>
+                                <span>중소기업 중심 산업구조로 양질의 일자리 제한적</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold text-blue-700 mb-3">정책적 문제</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-exclamation-circle text-red-600 mr-2 mt-1"></i>
+                                <span>청년 맞춤형 전문직 일자리 부족</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-exclamation-circle text-red-600 mr-2 mt-1"></i>
+                                <span>지역별 특성을 고려한 일자리 정책 미흡</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-exclamation-circle text-red-600 mr-2 mt-1"></i>
+                                <span>창업 생태계 및 지원 인프라 부족</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-exclamation-circle text-red-600 mr-2 mt-1"></i>
+                                <span>정책 성과와 시민 체감도 간 괴리</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-lg font-bold text-blue-700 mb-3">해결 방향성</h4>
+                    <p class="text-gray-700">이러한 문제를 해결하기 위해서는 지역 균형 발전과 청년 일자리 창출을 동시에 달성할 수 있는 통합적 접근이 필요합니다. 안성시 전역에 걸친 '청년 창업 플랫폼'은 지역별 특성을 살린 맞춤형 창업 생태계 조성과 청년들의 지역 정착 지원을 통해 균형 발전과 일자리 문제를 해결하고자 합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">안성시 청년 창업 플랫폼으로 해결책을 찾아보세요</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">지역 균형 발전과 청년 일자리 창출을 동시에 달성하는 혁신적인 접근법을 제안합니다.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="../index.html#regions" class="bg-white text-blue-700 font-bold px-6 py-3 rounded-lg hover:bg-blue-50 transition">지역별 창업 허브 보기</a>
+                <a href="../index.html#support" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-700 transition">지원 시스템 알아보기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">안성시 청년 창업 플랫폼</h4>
+                    <p class="mb-4">지역 균형 발전과 청년 일자리 창출을 위한 안성시의 혁신적인 프로젝트입니다.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">빠른 링크</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#overview" class="hover:text-white transition">소개</a></li>
+                        <li><a href="../index.html#regions" class="hover:text-white transition">지역별 허브</a></li>
+                        <li><a href="../index.html#support" class="hover:text-white transition">지원 시스템</a></li>
+                        <li><a href="../index.html#roadmap" class="hover:text-white transition">추진 로드맵</a></li>
+                        <li><a href="../index.html#benefits" class="hover:text-white transition">기대효과</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">관련 기관</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.anseong.go.kr" target="_blank" class="hover:text-white transition">안성시청</a></li>
+                        <li><a href="https://www.ggi.go.kr" target="_blank" class="hover:text-white transition">경기도경제과학진흥원</a></li>
+                        <li><a href="https://www.hknu.ac.kr" target="_blank" class="hover:text-white transition">한경국립대학교</a></li>
+                        <li><a href="https://www.etri.re.kr" target="_blank" class="hover:text-white transition">한국전자통신연구원</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">문의</h4>
+                    <ul class="space-y-2">
+                        <li>경기도 안성시 시청길 25</li>
+                        <li>전화: 031-678-2025</li>
+                        <li>이메일: wts755@korea.kr</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&copy; 2025 안성시청. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
+
+}
