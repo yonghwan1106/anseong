@@ -59,28 +59,51 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="text-center md:text-left">
+<!-- Hero Section with Background Image -->
+<section class="relative py-20 text-white">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="images/20250506_1.jpg" alt="안성시 배경 이미지" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-blue-900 bg-opacity-70"></div> <!-- 어두운 오버레이 추가 -->
+    </div>
+    
+    <!-- Content -->
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
                 <div class="inline-block bg-blue-800 bg-opacity-70 rounded-lg px-3 py-1 text-sm font-semibold mb-4">
                     2025년 상반기 안성시 시정발전 제안공모<br>
                 </div>
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">안성시 지역 균형 발전을 위한 청년 창업 플랫폼</h1>
-                    <p class="text-xl mb-8">지역별 특성을 살린 맞춤형 창업 생태계 조성과 청년들의 지역 정착 지원</p>
-                    <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-                        <a href="pages/regions.html" class="bg-white text-blue-700 font-bold px-6 py-3 rounded-lg hover:bg-blue-50 transition">자세히 알아보기</a>
-                        <a href="https://notebooklm.google.com/notebook/b390f9f4-1cfe-4e1d-920b-a0cdc97e5a2d/audio" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-700 transition">음성으로 듣기</a>
-                    </div>
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">안성시 지역 균형 발전을 위한 청년 창업 플랫폼</h1>
+                <p class="text-xl mb-8 text-white">지역별 특성을 살린 맞춤형 창업 생태계 조성과 청년들의 지역 정착 지원</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                    <a href="pages/regions.html" class="bg-white text-blue-700 font-bold px-6 py-3 rounded-lg hover:bg-blue-50 transition">자세히 알아보기</a>
+                    <a href="https://notebooklm.google.com/notebook/b390f9f4-1cfe-4e1d-920b-a0cdc97e5a2d/audio" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-700 transition">음성으로 듣기</a>
                 </div>
-                <div class="hidden md:block">
-                    <img src="images/20250506_1.jpg" alt="안성시 청년 창업 플랫폼 이미지"  class="w-full max-w-lg mx-auto">
+            </div>
+            <div class="hidden md:flex justify-center items-center">
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                    <h2 class="text-2xl font-bold mb-3">지역 균형 발전</h2>
+                    <p class="mb-4">서부권, 중부권, 동부권 특성에 맞는<br>맞춤형 창업 생태계 조성</p>
+                    <div class="flex justify-between text-center">
+                        <div>
+                            <div class="text-3xl font-bold">1,500+</div>
+                            <div class="text-sm">청년 일자리</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold">500+</div>
+                            <div class="text-sm">창업기업</div>
+                        </div>
+                        <!--div>
+                            <div class="text-3xl font-bold">25%</div>
+                            <div class="text-sm">정착률 향상</div>
+                        </div-->
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Overview Section -->
     <section id="overview" class="py-16 bg-white">
         <div class="container mx-auto px-4">
